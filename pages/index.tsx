@@ -29,6 +29,7 @@ const TypeAheadSearch: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center mt-8">
+      <h2 className='text-xl p-2 my-4 dark:text-blue-400'>Search Movie as you type. <span className='text-sm'>Fuzzy search enabled</span> </h2>
       <input
         type="text"
         placeholder="Type to search..."
