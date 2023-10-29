@@ -14,7 +14,7 @@ const TypeAheadSearch: React.FC = () => {
         const response = await fetch(`https://type-ahead.2.sg-1.fl0.io/search?query=${debouncedQuery}`);
         const responseJson = await response.json();
         console.log(responseJson);
-        setResults(responseJson.results);
+        setResults(responseJson.html_results);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -41,7 +41,7 @@ const TypeAheadSearch: React.FC = () => {
       <ul className="h-full overflow-y-auto bg-gray-100 w-90 rounded-md pl-2 dark:text-black">
         {results.map((result, idx) => (
           <li key={idx} className="border-b p-2 overflow-x-scroll">
-            {result}
+            <span style={{whiteSpace: 'nowrap'}}  dangerouslySetInnerHTML={{ __html: result }}/>
           </li>
         ))}
       </ul>
