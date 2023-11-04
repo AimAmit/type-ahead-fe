@@ -43,7 +43,7 @@ const TypeAheadSearch: React.FC = () => {
         className="border p-2 mb-4 w-96 rounded-md dark:text-black"
       />
       {/* {loading && <p>Loading...</p>} */}
-      <ul className="h-full overflow-y-auto bg-gray-100 w-90 rounded-md pl-2 dark:text-black">
+      <ul className="h-full w-96 overflow-y-auto bg-gray-100 rounded-md pl-2 dark:text-black">
         {results.map((result, idx) => (
           <li key={idx} className="border-b p-2 overflow-x-scroll">
             <span
@@ -54,11 +54,11 @@ const TypeAheadSearch: React.FC = () => {
         ))}
       </ul>
       <footer className="bg-white rounded-lg shadow dark:bg-gray-900 bottom-0 absolute w-full">
-        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        {/* <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8"> */}
+          <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400 p-2">
             Amit Kumar | contacttoamit00@gmail.com.
           </span>
-        </div>
+        {/* </div> */}
       </footer>
     </div>
   );
