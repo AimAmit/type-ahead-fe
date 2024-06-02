@@ -12,7 +12,7 @@ const TypeAheadSearch: React.FC = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `https://type-ahead.2.sg-1.fl0.io/search?query=${debouncedQuery}`
+          `https://typeahead-rs.0xamit.com/search?query=${debouncedQuery}`
         );
         const responseJson = await response.json();
         console.log(responseJson);
